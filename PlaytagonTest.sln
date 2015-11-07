@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaytagonTest.Web", "PlaytagonTest.Web\PlaytagonTest.Web.csproj", "{F754E36C-8FC6-46CD-9376-1DC9C740CC4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaytagonTest.DAL", "PlaytagonTest.DAL\PlaytagonTest.DAL.csproj", "{259CAB6E-7BD9-4C18-90B0-79BEBDC74447}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F754E36C-8FC6-46CD-9376-1DC9C740CC4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F754E36C-8FC6-46CD-9376-1DC9C740CC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F754E36C-8FC6-46CD-9376-1DC9C740CC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F754E36C-8FC6-46CD-9376-1DC9C740CC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{259CAB6E-7BD9-4C18-90B0-79BEBDC74447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{259CAB6E-7BD9-4C18-90B0-79BEBDC74447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{259CAB6E-7BD9-4C18-90B0-79BEBDC74447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{259CAB6E-7BD9-4C18-90B0-79BEBDC74447}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
