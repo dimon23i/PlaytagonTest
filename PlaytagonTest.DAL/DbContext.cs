@@ -1,5 +1,6 @@
 ﻿using NHibernate;
 using NHibernate.Cfg;
+using NHibernate.Tool.hbm2ddl;
 
 namespace PlaytagonTest.DAL
 {
@@ -16,7 +17,6 @@ namespace PlaytagonTest.DAL
                     var configuration = new Configuration();
                     configuration.Configure();
 //                    new SchemaExport(configuration).Execute(true,true,false);
-//                    configuration.AddAssembly(typeof(Character).Assembly);
                     _sessionFactory = configuration.BuildSessionFactory();
                 }
                 return _sessionFactory;

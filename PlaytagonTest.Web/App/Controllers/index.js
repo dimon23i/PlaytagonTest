@@ -1,12 +1,19 @@
 ﻿app.controller("IndexCtrl", function ($scope, $http, $uibModal) {
-    $scope.characters = [];
+    $scope.model = {};
+
+    var init = function () {
+        $http.get("/api/character").then(function (responce) {
+            $scope.model.characters = responce.data;
+        });
+    };
+    init();
 
     $scope.add = function () {
         var model = {};
 
         $scope.openModal(model)
             .result.then(function (data) {
-                $scope.characters.push(data);
+                $scope.model.characters.push(data);
             });
     };
     $scope.edit = function (item) {
@@ -18,7 +25,9 @@
             });
     };
     $scope.remove = function (array, index) {
-        array.remove(index);
+        $http.delete("/api/character/" + array[index].Id).then(function () {
+            array.splice(index, 1);
+        });
     };
     $scope.openModal = function (model, templateId, controller) {
         templateId = templateId || 'CharacterEditor';

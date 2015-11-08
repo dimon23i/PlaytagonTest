@@ -1,6 +1,6 @@
 ﻿<div ng-controller="IndexCtrl">
     <div class="jumbotron">
-        <h1>The Playtagon test task</h1>
+        <h1>A test task for Playtagon</h1>
         <p class="lead">A table of the characters stored in Postgres DB and with implemented CRUD operations.</p>
     </div>
     <div class="row">
@@ -20,12 +20,18 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="character in model.characters">
-                            <td>{{Name}}</td>
-                            <td>{{Health}}</td>
-                            <td>{{Mana}}</td>
-                            <td>{{Level}}</td>
-                            <td>{{Gold}}</td>
-                            <td>{{IsImmortal}}</td>
+                            <td>{{character.Name}}</td>
+                            <td>{{character.Health}}</td>
+                            <td>{{character.Mana}}</td>
+                            <td>{{character.Level}}</td>
+                            <td>{{character.Gold}}</td>
+                            <td>{{character.IsImmortal}}</td>
+                            <td>
+                                <a class="col-xs-3" href="#" ng-click="edit(character)"><i class="glyphicon glyphicon-pencil"></i></a>
+                            </td>
+                            <td>
+                                <button ng-click="remove(model.characters, $index)" type="button" class="col-xs-push-3 close" style="float: none">×</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

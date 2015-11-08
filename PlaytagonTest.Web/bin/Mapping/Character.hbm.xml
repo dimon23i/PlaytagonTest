@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="PlaytagonTest.Web.Models" assembly="PlaytagonTest.Web">
 
-  <class name="Character" table="CHARACTER" >
-
-    <id name="Id" column="ID">
+  <class name="Character" table="CHARACTER" lazy="true">
+    <id name="Id">
       <generator class="native" />
     </id>
 
-    <property name="Name" column="NAME" not-null="true" />
-
+    <property name="Name" not-null="true" />
+    <property name="Health" not-null="false" />
+    <property name="Mana" not-null="false" />
+    <property name="Level" not-null="false" />
+    <property name="Gold" not-null="false" />
+    <property name="IsImmortal" not-null="true" />
   </class>
 </hibernate-mapping>
