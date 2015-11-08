@@ -22,7 +22,7 @@
     };
     $scope.openModal = function (model, templateId, controller) {
         templateId = templateId || 'CharacterEditor';
-        controller = controller || 'ModalEdittCtrl';
+        controller = controller || 'ModalEditCtrl';
 
         return $uibModal.open({
             animation: $scope.animationsEnabled,

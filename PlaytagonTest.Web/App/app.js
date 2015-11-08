@@ -1,1 +1,1 @@
-﻿app = angular.module("app", ["ui.bootsrap"]);
+﻿app = angular.module("app", ["ui.bootstrap"]);
