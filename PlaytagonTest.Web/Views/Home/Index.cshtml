@@ -1,4 +1,4 @@
-﻿<div ng-controller="IndexCtrl">
+﻿<div ng-controller="IndexCtrl" ng-cloak>
     <div class="jumbotron">
         <h1>A test task for Playtagon</h1>
         <p class="lead">A table of the characters stored in Postgres DB and with implemented CRUD operations.</p>
@@ -19,7 +19,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="character in model.characters">
+                        <tr ng-repeat="character in filteredCharacters">
                             <td>{{character.Name}}</td>
                             <td>{{character.Health}}</td>
                             <td>{{character.Mana}}</td>
@@ -37,6 +37,7 @@
                 </table>
             </div>
             <p>
+                <pagination total-items="totalItems" class="pu" items-per-page="itemsPerPage" ng-model="currentPage"></pagination>
                 <button class="btn btn-primary pull-right" ng-click="add()">Add</button>
             </p>
         </div>

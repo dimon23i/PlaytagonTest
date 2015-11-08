@@ -1,9 +1,19 @@
 ﻿app.controller("IndexCtrl", function ($scope, $http, $uibModal) {
     $scope.model = {};
+    $scope.itemsPerPage = 5;
+    $scope.currentPage = 1;
 
     var init = function () {
         $http.get("/api/character").then(function (responce) {
             $scope.model.characters = responce.data;
+
+            $scope.$watch('currentPage + itemsPerPage + model.characters', function () {
+                $scope.totalItems = $scope.model.characters.length;
+                var begin = (($scope.currentPage - 1) * $scope.itemsPerPage),
+                    end = begin + $scope.itemsPerPage;
+
+                $scope.filteredCharacters = $scope.model.characters.slice(begin, end);
+            });
         });
     };
     init();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http;
 using PlaytagonTest.DAL;
 using PlaytagonTest.Web.Models;
@@ -13,7 +14,7 @@ namespace PlaytagonTest.Web.Controllers
             using (var session = DbContext.OpenSession())
             {
                 var query = session.CreateQuery("FROM Character");
-                var characters = query.List<Character>();
+                var characters = query.List<Character>().OrderBy(c => c.Name);
 
                 return characters;
             }
