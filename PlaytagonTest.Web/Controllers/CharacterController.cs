@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using PlaytagonTest.DAL;
 using PlaytagonTest.Web.Models;
@@ -20,27 +22,24 @@ namespace PlaytagonTest.Web.Controllers
             }
         }
 
-        public void Post([FromBody]Character character)
+        public HttpResponseMessage Put([FromBody]Character character)
         {
-            using (var session = DbContext.OpenSession())
+            if (ModelState.IsValid)
             {
-                using (var transaction = session.BeginTransaction())
+                using (var session = DbContext.OpenSession())
                 {
-                    session.Save(character);
-                    transaction.Commit();
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        session.SaveOrUpdate(character);
+                        transaction.Commit();
+
+                        return new HttpResponseMessage(HttpStatusCode.OK);
+                    }
                 }
             }
-        }
-
-        public void Put([FromBody]Character character)
-        {
-            using (var session = DbContext.OpenSession())
+            else
             {
-                using (var transaction = session.BeginTransaction())
-                {
-                    session.SaveOrUpdate(character);
-                    transaction.Commit();
-                }
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
             }
         }
 
