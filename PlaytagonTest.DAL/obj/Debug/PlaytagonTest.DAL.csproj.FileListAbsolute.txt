@@ -1,0 +1,13 @@
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\bin\Debug\PlaytagonTest.DAL.dll
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\bin\Debug\PlaytagonTest.DAL.pdb
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\bin\Debug\Iesi.Collections.dll
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\bin\Debug\NHibernate.dll
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\bin\Debug\Npgsql.dll
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\bin\Debug\Iesi.Collections.xml
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\bin\Debug\NHibernate.xml
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\bin\Debug\Npgsql.xml
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\obj\Debug\PlaytagonTest.DAL.csprojResolveAssemblyReference.cache
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\obj\Debug\PlaytagonTest.DAL.dll
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\obj\Debug\PlaytagonTest.DAL.pdb
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\bin\Debug\Mapping\Character.hbm.xml
+D:\Projects\PlaytagonTest\PlaytagonTest.DAL\bin\Debug\hibernate.cfg.xml
